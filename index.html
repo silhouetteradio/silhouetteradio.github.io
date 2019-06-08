@@ -57,8 +57,8 @@
 	  </div>
 	  <div id=navbar-desktopcontrolcontainer>
 	    <img id=navbar-desktopcontrol src="./style/images/play-white.svg" onClick="streamToggle()">
-		<iframe id=navbar-desktoplike src="http://silhouetteradio.ddns.net:8080/php/likes.php" style="overflow:hidden" scroll="no"></iframe>
-		<iframe id=navbar-desktopview src="http://silhouetteradio.ddns.net:8080/php/hits.php" style="overflow:hidden" scroll="no"></iframe>
+		<iframe id=navbar-desktoplike src="http://silhouetteradio.ddns.net:8080/!admin/php/likes.php" style="overflow:hidden" scroll="no"></iframe>
+		<iframe id=navbar-desktopview src="http://silhouetteradio.ddns.net:8080/!admin/php/hits.php" style="overflow:hidden" scroll="no"></iframe>
 	  </div>
 	</div>
    <!-- <div id=request>
@@ -321,8 +321,9 @@
   <div id=footer-line></div>
   <div id="footer">
     <a href="#top">Silhouette</a>
-	<a onClick="window.open('http://www.silhouette.gq/legal/#copyright','_blank')">Copyright Claims</a>
-	<a onClick="window.open('http://www.silhouette.gq/legal','_blank')">Legal</a>
+	<a onClick="window.open('http://www.silhouette.gq/legal/#copyright','_blank')">Copyright Claim</a>
+	<a onClick="window.open('http://www.silhouette.gq/legal','_blank')">Terms of Use</a>
+	<a onClick="window.open('http://www.silhouette.gq/privacy','_blank')">Privacy Policy</a>
 	<a onClick="window.open('http://www.silhouette.gq/jobs','_blank')">Job Opportunities</a>
 	<a onClick="window.open('http://www.silhouette.gq/developer','_blank')">Use Silhouette</a>
 	<a onClick="window.open('http://www.silhouette.gq/contact','_blank')">Contact</a>
@@ -340,20 +341,20 @@
   <br>
   <script src="./script/jq.js"></script>
   <script src="./script/script.js"></script>
-<script>
-$(document).ready(function(){
-  $("a").on('click', function(event) {
-    if (this.hash !== "") {
-      event.preventDefault();
-      var hash = this.hash;
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 1000, function(){  //time
-        window.location.hash = hash;
+  <script>
+	$(document).ready(function(){
+	  $("a").on('click', function(event) {
+		if (this.hash !== "") {
+		  event.preventDefault();
+		  var hash = this.hash;
+		  $('html, body').animate({
+			scrollTop: $(hash).offset().top
+		  }, 1000, function(){  //time
+            window.location.hash = hash;
+          });
+        }
       });
-    }
-  });
-});
-</script>
+    });
+  </script>
   </body>
 </html>
