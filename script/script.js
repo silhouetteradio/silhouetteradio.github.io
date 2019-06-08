@@ -126,7 +126,6 @@ function streamStop() {
 
 var calendarDate = new Date();
 var calendarDay = calendarDate.getDay();
-alert(calendarDay);
 if (calendarDay == 0) {
 	calendarDay = 7;
 };
