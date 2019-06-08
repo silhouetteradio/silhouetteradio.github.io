@@ -1,6 +1,14 @@
 var secondOffset;
 var heightOffset;
 
+window.onload = function loadUp() {
+	document.getElementById('load').style.opacity = '0';
+	document.getElementById('load').style.pointerEvents = 'none';
+	setTimeout(function() {
+		document.getElementById('load').style.display = 'none';
+	}, 1000)
+};
+
 setInterval(function() {
 	if ( document.documentElement.scrollTop == 0) {
 		document.getElementById('navbar-bottom').style.opacity = '0';
@@ -116,12 +124,10 @@ function streamStop() {
 	stream.volume = 0;
 }
 
-
-var d = new Date();
-var n = d.getDay();
-document.getElementsByClassName("third-day")[n - 1].setAttribute("class", "day-select third-day");
-
-window.onload = function() {
-	document.getElementById('load').style.opacity = '0';
-	document.getElementById('load').style.pointerEvents = 'none';
+var calendarDate = new Date();
+var calendarDay = calendarDate.getDay();
+alert(calendarDay);
+if (calendarDay == 0) {
+	calendarDay = 7;
 };
+document.getElementsByClassName("third-day")[calendarDay - 1].setAttribute("class", "day-select third-day");
