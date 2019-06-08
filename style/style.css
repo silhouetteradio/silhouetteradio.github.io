@@ -368,7 +368,16 @@ body {
 	display: none;
 }
 
-#navbar:hover #navbar-desktopcontrol, #navbar:hover #navbar-desktoplike, #navbar:hover #navbar-desktoppopout {
+#navbar-desktopview {
+	height: 30px;
+	overflow: hidden;
+	border: none;
+	float: left;
+	width: 100px;
+	display: none;
+}
+
+#navbar:hover #navbar-desktopcontrol, #navbar:hover #navbar-desktoplike, #navbar:hover #navbar-desktoppopout,  #navbar:hover #navbar-desktopview {
 	display: inline-block;
 }
 
@@ -650,6 +659,7 @@ body {
 	margin-left: 8px;
 	line-height: 21px;
 	cursor: pointer;
+	text-decoration: none;
 }
 
 .third-time {
@@ -712,8 +722,21 @@ body {
 	float: left;
 	background-position: center;
 	background-size: cover;
-	border: 3px solid red;
+	border: 3px solid white;
 	transition: 0.6s;
+	background-repeat: no-repeat;
+}
+
+.fourth-event p a {
+	text-decoration: none;
+	border-bottom: 1px solid red;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+.fourth-event p a:hover {
+	color: red;
+	transition: 0.2s;
 }
 
 .fourth-event { 
@@ -778,6 +801,11 @@ body {
 	border: 2px solid transparent;
 }
 
+.fifth-anchor {
+	position: relative;
+	top: -150px;
+}
+
 .fifth-show:hover {
 	border: 2px solid white;
 }
@@ -804,7 +832,7 @@ body {
 #footer a {
 	color: white;
 	font-family: montserratlight;
-	text-decoration: underline;
+	text-decoration: none;
 	user-select: none;
 	-webkit-touch-callout: none;
 	-moz-user-select: none;
@@ -813,6 +841,15 @@ body {
 	margin: 10px;
 	display: inline-block;
 	margin-top: 0px;
+	border-bottom: 1px solid white;
+	transition: 0.1s;
+}
+
+#footer a:hover {
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 #footer-line {
@@ -835,7 +872,7 @@ body {
 	margin-left: 10px;
 	margin-right: 10px;
 	cursor: pointer;
-	transition: 0.25s;
+	transition: 0.15s;
 	position: relative;
 	top: 0px;
 }
@@ -968,6 +1005,10 @@ body {
 }
 #socialpop {
 	top: 100px;
+}
+.fifth-anchor {
+	position: relative;
+	top: -70px;
 }
 }
 
