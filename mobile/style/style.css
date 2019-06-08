@@ -33,6 +33,18 @@ body {
 	opacity: 0;
 }
 
+#navbar-desktoplike {
+	height: 30px;
+	overflow: hidden;
+	border: none;
+	float: left;
+	width: 100px;
+	margin-left: 10px;
+	margin-top: 10px;
+	z-index: 10;
+	position: relative;
+}
+
 #top-title {
 	color: white;
 	font-family: lemonmilk;
