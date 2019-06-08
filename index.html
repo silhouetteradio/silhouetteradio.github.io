@@ -23,6 +23,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   </head>
   <body>
+  <div id=load><div></div></div>
   <div style="scroll-behavior:smooth">
     <audio id=stream src="http://listen.openstream.co/3813/audio" autostart="0"></audio>
 	<img src="back.png" style="display: none" id=top>
@@ -51,10 +52,10 @@
 		<iframe id=navbar-desktopview src="http://silhouetteradio.ddns.net:8080/php/hits.php" style="overflow:hidden" scroll="no"></iframe>
 	  </div>
 	</div>
-	<div id=request>
+   <!-- <div id=request>
 	  <div onClick="requestClose()"></div>
 	  <iframe src="./request/index.html"></iframe>
-	</div>
+	</div> -->
 	<div id=mobile-play onClick="streamToggle()"><div><img src="./style/images/play-white.svg" id=mobile-image></div></div>
 	<div id=top>
 	  <div id=top-titlecontainer>

@@ -19,6 +19,30 @@ body {
     src: url("./fonts/Montserrat-Light.otf") format("opentype");
 }
 
+#load {
+	position: fixed;
+	z-index: 15;
+	width: 100%;
+	height: 100vh;
+	background-color: black;
+	top: 0px;
+	left: 0px;
+	transition: 0.2s;
+}
+
+#load div {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: calc(50% - 50px);
+	top: calc(50vh - 50px);
+	background-image: url('./images/record.svg');
+	background-size: cover;
+	background-position: center;
+	-webkit-animation: rotate 12s linear;
+	-webkit-animation-iteration-count: infinite;
+}
+
 .listen-contain {
 	text-align: center;
 }

@@ -120,3 +120,8 @@ function streamStop() {
 var d = new Date();
 var n = d.getDay();
 document.getElementsByClassName("third-day")[n - 1].setAttribute("class", "day-select third-day");
+
+window.onload = function() {
+	document.getElementById('load').style.opacity = '0';
+	document.getElementById('load').style.pointerEvents = 'none';
+};
