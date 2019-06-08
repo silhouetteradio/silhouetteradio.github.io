@@ -971,6 +971,9 @@ body {
 	padding: 0px;
 	margin: 20px;
 }
+#lineup {
+	top: -500px;
+}
 }
 
 
@@ -1041,9 +1044,6 @@ body {
 .fifth-anchor {
 	position: relative;
 	top: -70px;
-}
-#lineup {
-	top: -800px;
 }
 }
 
