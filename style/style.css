@@ -973,6 +973,9 @@ body {
 #request {
 	display: none;
 }
+#lineup-title {
+	margin-bottom: 200px;
+}
 #top-title {
 	font-size: 3em;
 }
