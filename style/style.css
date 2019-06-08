@@ -911,6 +911,11 @@ body {
 
 /*  Response  */
 
+#lineup {
+	position: relative;
+	top: -200px;
+}
+
 #scroll {
 	position:absolute;
 	top:calc(100vh - 100px);
@@ -1036,6 +1041,9 @@ body {
 .fifth-anchor {
 	position: relative;
 	top: -70px;
+}
+#lineup {
+	top: -400px;
 }
 }
 
