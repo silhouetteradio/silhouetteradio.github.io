@@ -1,0 +1,97 @@
+body {
+	background-color: black;
+	overflow-x: hidden;
+}
+
+@font-face {
+    font-family: lemonmilk;
+    src: url("./fonts/LemonMilk.otf") format("opentype");
+}
+
+@font-face {
+    font-family: montserratlight;
+    src: url("./fonts/Montserrat-Light.otf") format("opentype");
+}
+
+#title {
+	font-family: lemonmilk;
+	color: white;
+	text-align: center;
+	width: 100%;
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: calc(50vh - 100px);
+}
+
+#error {
+	color: white;
+	font-family: montserratlight;
+	text-align: center;
+	top: calc(50vh - 100px);
+	position: relative;
+}
+
+#home {
+	background-color: red;
+	font-family: lemonmilk;
+	color: white;
+	padding: 10px;
+	font-size: 1.4em;
+	text-align: center;
+	user-select: none;
+	-webkit-touch-callout: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	cursor: pointer;
+	transition: 0.3s;
+	text-decoration: none;
+}
+
+#home:hover {
+	padding-left: 15px;
+	padding-right: 15px;
+	transition: 0.1s;
+}
+
+#home-container {
+	position: relative;
+	text-align: center;
+	top: calc(50vh - 50px);
+}
+
+#other {
+	position: relative;
+	top: 50vh;
+	text-align: center;
+	color: white;
+	font-family: montserratlight
+}
+
+#links {
+	width: 100%;
+	max-width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 50vh;
+}
+
+#links a {
+	color: white;
+	font-family: montserratlight;
+	display: block;
+	margin: 10px;
+	transition: 0.3s;
+}
+
+#links a:hover {
+	color: red;
+	transition: 0.1s;
+}
+
+@media screen and (max-width: 600px) {
+#links a {
+	text-align: center;
+}
