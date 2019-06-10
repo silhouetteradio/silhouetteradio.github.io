@@ -183,3 +183,9 @@ img {
 	top: -10px;
 	transition: 0.1s;
 }
+
+@media screen and (max-width: 800px) {
+	h1 {
+	font-size: 4em;	
+	}
+}
