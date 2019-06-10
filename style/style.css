@@ -43,6 +43,12 @@ body {
 	-webkit-animation-iteration-count: infinite;
 }
 
+#form {
+	margin-top: 20px;
+	width: 250px;
+	margin-bottom: 50px;
+}
+
 .listen-contain {
 	text-align: center;
 }
