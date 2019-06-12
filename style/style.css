@@ -191,10 +191,10 @@ body {
 }
 
 @keyframes start {
-	0% {width: 0px}
+	0% {width: 0px;left:70px}
 	5% {width: 220px}
-	95% {width: 220px}
-	100% {width: 0px}
+	95% {width: 220px;left:70px}
+	100% {width: 0px;left:40px}
 }
 
 @keyframes fade {
@@ -227,7 +227,7 @@ body {
 	position: absolute;
 	top: -15px;
 	left: 0px;
-	width: 100%;
+	width: 220px;
 }
 #socialpop img {
 	display: inline-block;
@@ -240,6 +240,7 @@ body {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	margin: 7px;
+
 }
 
 #request {
@@ -620,6 +621,7 @@ body {
 	left: 0px;
 	pointer-events: none;
 	z-index: 1;
+	opacity: 0;
 }
 
 #third-calendarcontainer {
