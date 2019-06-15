@@ -33,7 +33,7 @@ setInterval(function() {
 	secondOffset = document.getElementById('second-base').offsetTop - document.getElementById('top').clientHeight;
 	//document.getElementById('second').style.height = secondOffset + "px";
 	
-	if (document.documentElement.scrollTop >= document.getElementById('second-base').offsetTop + 120 + document.getElementById('fourth').clientHeight) {
+	if (document.documentElement.scrollTop >= document.getElementById('third-calendarcontainer').offsetTop + 60) {
 		document.getElementById('third-cover').style.opacity = '0';
 		document.getElementById('lineup-title').style.color = 'white';
 		document.getElementsByClassName('navbar-link')[0].style.borderBottom = '2px solid transparent';
