@@ -1061,5 +1061,10 @@ body {
 }
 }
 
+::selection {
+	color: white;
+	background-color: red;
+}
+
 
 /*  /Response  */

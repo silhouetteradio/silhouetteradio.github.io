@@ -95,3 +95,8 @@ body {
 #links a {
 	text-align: center;
 }
+
+::selection {
+	color: white;
+	background-color: red;
+}
