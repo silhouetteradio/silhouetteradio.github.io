@@ -189,8 +189,3 @@ img {
 	font-size: 4em;	
 	}
 }
-
-::selection {
-	color: white;
-	background-color: red;
-}
