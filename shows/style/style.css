@@ -1,0 +1,102 @@
+body {
+	margin: 0px;
+	overflow: hidden;
+	background-color: black;
+	user-select: none;
+	-webkit-touch-callout: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+@font-face {
+    font-family: lemonmilk;
+    src: url("./fonts/LemonMilk.otf") format("opentype");
+}
+
+@font-face {
+    font-family: montserratlight;
+    src: url("./fonts/Montserrat-Light.otf") format("opentype");
+}
+
+h1 {
+	color: white;
+	font-family: lemonmilk;
+	margin: 0px;
+	margin-top: 40vh;
+	text-align: center;
+	font-size: 4em;
+}
+
+#load {
+	position: fixed;
+	z-index: 15;
+	width: 100%;
+	height: 100vh;
+	background-color: black;
+	top: 0px;
+	left: 0px;
+	transition: 0.2s;
+}
+
+#load-1 {
+  background-image: url("./loading-1.svg");
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+}
+
+#load-2 {
+  background-image: url("./loading-2.svg");
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+#load-3 {
+  background-image: url("./loading-3.svg");
+  -webkit-animation-duration: 6s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+#load-4 {
+  background-image: url("./loading-4.svg");
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.load-rotate {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  -webkit-animation: load-rotate;
+}
+
+@keyframes load-rotate {
+  0% {transform: rotate(0deg)}
+  100% {transform: rotate(359deg)}
+}
+
+#load-record {
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  top: calc(50vh - 100px);
+  left: calc(50% - 100px);
+  -webkit-animation: load-rotate 6s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-play-state: paused;
+  animation: rotate 6s linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+	0% {transform: rotate(0deg)}
+	100% {transform: rotate(359deg)}
+}

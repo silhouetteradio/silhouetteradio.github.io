@@ -38,17 +38,62 @@ body {
 	transition: 0.2s;
 }
 
-#load div {
-	width: 100px;
-	height: 100px;
-	position: absolute;
-	left: calc(50% - 50px);
-	top: calc(50vh - 50px);
-	background-image: url('./images/record.svg');
-	background-size: cover;
-	background-position: center;
-	-webkit-animation: rotate 12s linear;
-	-webkit-animation-iteration-count: infinite;
+#load-1 {
+  background-image: url("./loading-1.svg");
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+}
+
+#load-2 {
+  background-image: url("./loading-2.svg");
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+#load-3 {
+  background-image: url("./loading-3.svg");
+  -webkit-animation-duration: 6s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+#load-4 {
+  background-image: url("./loading-4.svg");
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.load-rotate {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  -webkit-animation: load-rotate;
+}
+
+@keyframes load-rotate {
+  0% {transform: rotate(0deg)}
+  100% {transform: rotate(359deg)}
+}
+
+#load-record {
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  top: calc(50vh - 100px);
+  left: calc(50% - 100px);
+  -webkit-animation: load-rotate 6s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-play-state: paused;
+  animation: rotate 6s linear;
+  animation-iteration-count: infinite;
 }
 
 h1 {
