@@ -35,11 +35,15 @@ setInterval(function() {
 	
 	if (document.documentElement.scrollTop >= document.getElementById('third-calendarcontainer').offsetTop + 60) {
 		document.getElementById('third-cover').style.opacity = '0';
+		document.getElementById('fourth').style.opacity = '0';
+		document.getElementById('second').style.opacity = '0';
 		document.getElementById('lineup-title').style.color = 'white';
 		document.getElementsByClassName('navbar-link')[0].style.borderBottom = '2px solid transparent';
 		document.getElementsByClassName('navbar-link')[1].style.borderBottom = '2px solid red';
 	} else {
 		document.getElementById('third-cover').style.opacity = '1';
+		document.getElementById('fourth').style.opacity = '1';
+		document.getElementById('second').style.opacity = '1';
 		document.getElementById('lineup-title').style.color = 'black';
 		document.getElementsByClassName('navbar-link')[0].style.borderBottom = '2px solid red';
 		document.getElementsByClassName('navbar-link')[1].style.borderBottom = '2px solid transparent';
