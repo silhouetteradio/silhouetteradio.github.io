@@ -43,7 +43,8 @@
   <body>
   <div id=load><div id="load-record"><div id="load-1"></div><div class="load-rotate" id="load-2"></div><div class="load-rotate" id="load-3"></div><div class="load-rotate" id="load-4"></div></div></div>
   <div style="scroll-behavior:smooth">
-    <audio id=stream src="https://str2b.openstream.co/1010?aw_0_1st.stationid=3813&aw_0_1st.publisherId=1034&aw_0_1st.serverId=str2b" autostart="0"></audio>
+    <audio id=stream src="https://str2b.openstream.co/1035?aw_0_1st.stationid=3849&aw_0_1st.publisherId=1059&aw_0_1st.serverId=str2b" autostart="0"></audio>
+	<!--<audio id=stream2 src="https://str2b.openstream.co/1036?aw_0_1st.stationid=3850&aw_0_1st.publisherId=1060&aw_0_1st.serverId=str2b" autostart="0"></audio>-->
 	<img src="back.png" style="display: none" id=top>
 	<div id=scroll></div>
     <div id=navbar>
@@ -66,7 +67,11 @@
 	  </div>
 	  <div id=navbar-desktopcontrolcontainer>
 	    <img id=navbar-desktopcontrol src="./style/images/play-white.svg" onClick="streamToggle()">
-		<iframe id=navbar-desktoplike src="https://php-additions.silhouette.repl.co/php/likes.php" style="overflow:hidden" scroll="no"></iframe>
+		<div id=navbar-desktopquality>
+		  <h2>Quality</h2>
+		  <a class="navbar-q navbar-quality" onClick="qualityHigh()">High</a>
+		  <a class="navbar-q navbar-quality-selected" onClick="qualityMedium()">Medium</a>
+		</div>
 		<iframe id=navbar-desktopview src="https://php-additions.silhouette.repl.co/php/hits.php" style="overflow:hidden" scroll="no"></iframe>
 	  </div>
 	</div>
@@ -122,192 +127,192 @@
 		<div id=lineup></div>
 	    <div class=third-day>
 		  <h1>Mon</h1>
-		  <a href="#eveningchill"><span class=third-time>00:00</span> - <span class=calendar id=mon-00>Evening Chill</span></a>
-		  <a href="#eveningchill"><span class=third-time>01:00</span> - <span class=calendar id=mon-01>Evening Chill</span></a>
-		  <a href="#eveningchill"><span class=third-time>02:00</span> - <span class=calendar id=mon-01>Evening Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>03:00</span> - <span class=calendar id=mon-03>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>04:00</span> - <span class=calendar id=mon-04>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>05:00</span> - <span class=calendar id=mon-05>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>06:00</span> - <span class=calendar id=mon-06>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>07:00</span> - <span class=calendar id=mon-07>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>08:00</span> - <span class=calendar id=mon-08>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>09:00</span> - <span class=calendar id=mon-09>Morning Chill</span></a>
-		  <a><span class=third-time>10:00</span> - <span class=calendar id=mon-10>Alpha</span></a>
-		  <a><span class=third-time>11:00</span> - <span class=calendar id=mon-11>Alpha</span></a>
-		  <a><span class=third-time>12:00</span> - <span class=calendar id=mon-12>Alpha</span></a>
-		  <a><span class=third-time>13:00</span> - <span class=calendar id=mon-13>Alpha</span></a>
-		  <a><span class=third-time>14:00</span> - <span class=calendar id=mon-14>Alpha</span></a>
+		  <a href="#vaporwave"><span class=third-time>00:00</span> - <span class=calendar id=mon-00>Vaporwave</span></a>
+		  <a href="#vaporwave"><span class=third-time>01:00</span> - <span class=calendar id=mon-01>Vaporwave</span></a>
+		  <a href="#vaporwave"><span class=third-time>02:00</span> - <span class=calendar id=mon-01>Vaporwave</span></a>
+		  <a href="#vaporwave"><span class=third-time>03:00</span> - <span class=calendar id=mon-03>Vaporwave</span></a>
+		  <a href="#tripsketch"><span class=third-time>04:00</span> - <span class=calendar id=mon-04>Tripsketch</span></a>
+		  <a href="#woke"><span class=third-time>05:00</span> - <span class=calendar id=mon-05>Woke</span></a>
+		  <a href="#woke"><span class=third-time>06:00</span> - <span class=calendar id=mon-06>Woke</span></a>
+		  <a href="#woke"><span class=third-time>07:00</span> - <span class=calendar id=mon-07>Woke</span></a>
+		  <a href="#woke"><span class=third-time>08:00</span> - <span class=calendar id=mon-08>Woke</span></a>
+		  <a href="#woke"><span class=third-time>09:00</span> - <span class=calendar id=mon-09>Woke</span></a>
+		  <a href="#highway"><span class=third-time>10:00</span> - <span class=calendar id=mon-10>Highway</span></a>
+		  <a href="#highway"><span class=third-time>11:00</span> - <span class=calendar id=mon-11>Highway</span></a>
+		  <a href="#highway"><span class=third-time>12:00</span> - <span class=calendar id=mon-12>Highway</span></a>
+		  <a href="#highway"><span class=third-time>13:00</span> - <span class=calendar id=mon-13>Highway</span></a>
+		  <a href="#highway"><span class=third-time>14:00</span> - <span class=calendar id=mon-14>Highway</span></a>
 		  <a href="#afternoonride"><span class=third-time>15:00</span> - <span class=calendar id=mon-15>Afternoon Ride</span></a>
 		  <a href="#afternoonride"><span class=third-time>16:00</span> - <span class=calendar id=mon-16>Afternoon Ride</span></a>
 		  <a href="#afternoonride"><span class=third-time>17:00</span> - <span class=calendar id=mon-17>Afternoon Ride</span></a>
-		  <a><span class=third-time>18:00</span> - <span class=calendar id=mon-18>Alpha</span></a>
+		  <a href="#toppicks"><span class=third-time>18:00</span> - <span class=calendar id=mon-18>Top Picks</span></a>
 		  <a href="#eveningchill"><span class=third-time>19:00</span> - <span class=calendar id=mon-19>Evening Chill</span></a>
 		  <a href="#eveningchill"><span class=third-time>20:00</span> - <span class=calendar id=mon-20>Evening Chill</span></a>
 		  <a href="#eveningchill"><span class=third-time>21:00</span> - <span class=calendar id=mon-21>Evening Chill</span></a>
 		  <a href="#eveningchill"><span class=third-time>22:00</span> - <span class=calendar id=mon-22>Evening Chill</span></a>
-		  <a href="#eveningchill"><span class=third-time>23:00</span> - <span class=calendar id=mon-23>Evening Chill</span></a>
+		  <a href="#vaporwave"><span class=third-time>23:00</span> - <span class=calendar id=mon-23>Vaporwave</span></a>
 		</div>
 	    <div class=third-day>
 		  <h1>Tue</h1>
-		  <a href="#eveningchill"><span class=third-time>00:00</span> - <span class=calendar id=tue-00>Evening Chill</span></a>
-		  <a href="#eveningchill"><span class=third-time>01:00</span> - <span class=calendar id=tue-01>Evening Chill</span></a>
-		  <a href="#eveningchill"><span class=third-time>02:00</span> - <span class=calendar id=tue-01>Evening Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>03:00</span> - <span class=calendar id=tue-03>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>04:00</span> - <span class=calendar id=tue-04>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>05:00</span> - <span class=calendar id=tue-05>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>06:00</span> - <span class=calendar id=tue-06>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>07:00</span> - <span class=calendar id=tue-07>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>08:00</span> - <span class=calendar id=tue-08>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>09:00</span> - <span class=calendar id=tue-09>Morning Chill</span></a>
-		  <a><span class=third-time>10:00</span> - <span class=calendar id=tue-10>Alpha</span></a>
-		  <a><span class=third-time>11:00</span> - <span class=calendar id=tue-11>Alpha</span></a>
-		  <a><span class=third-time>12:00</span> - <span class=calendar id=tue-12>Alpha</span></a>
-		  <a><span class=third-time>13:00</span> - <span class=calendar id=tue-13>Alpha</span></a>
-		  <a><span class=third-time>14:00</span> - <span class=calendar id=tue-14>Alpha</span></a>
+		  <a href="#vaporwave"><span class=third-time>00:00</span> - <span class=calendar id=tue-00>Vaporwave</span></a>
+		  <a href="#vaporwave"><span class=third-time>01:00</span> - <span class=calendar id=tue-01>Vaporwave</span></a>
+		  <a href="#vaporwave"><span class=third-time>02:00</span> - <span class=calendar id=tue-01>Vaporwave</span></a>
+		  <a href="#vaporwave"><span class=third-time>03:00</span> - <span class=calendar id=tue-03>Vaporwave</span></a>
+		  <a href="#tripsketch"><span class=third-time>04:00</span> - <span class=calendar id=tue-04>Tripsketch</span></a>
+		  <a href="#woke"><span class=third-time>05:00</span> - <span class=calendar id=tue-05>Woke</span></a>
+		  <a href="#woke"><span class=third-time>06:00</span> - <span class=calendar id=tue-06>Woke</span></a>
+		  <a href="#woke"><span class=third-time>07:00</span> - <span class=calendar id=tue-07>Woke</span></a>
+		  <a href="#woke"><span class=third-time>08:00</span> - <span class=calendar id=tue-08>Woke</span></a>
+		  <a href="#woke"><span class=third-time>09:00</span> - <span class=calendar id=tue-09>Woke</span></a>
+		  <a href="#highway"><span class=third-time>10:00</span> - <span class=calendar id=tue-10>Highway</span></a>
+		  <a href="#highway"><span class=third-time>11:00</span> - <span class=calendar id=tue-11>Highway</span></a>
+		  <a href="#highway"><span class=third-time>12:00</span> - <span class=calendar id=tue-12>Highway</span></a>
+		  <a href="#highway"><span class=third-time>13:00</span> - <span class=calendar id=tue-13>Highway</span></a>
+		  <a href="#highway"><span class=third-time>14:00</span> - <span class=calendar id=tue-14>Highway</span></a>
 		  <a href="#afternoonride"><span class=third-time>15:00</span> - <span class=calendar id=tue-15>Afternoon Ride</span></a>
 		  <a href="#afternoonride"><span class=third-time>16:00</span> - <span class=calendar id=tue-16>Afternoon Ride</span></a>
 		  <a href="#afternoonride"><span class=third-time>17:00</span> - <span class=calendar id=tue-17>Afternoon Ride</span></a>
-		  <a><span class=third-time>18:00</span> - <span class=calendar id=tue-18>Alpha</span></a>
+		  <a href="#toppicks"><span class=third-time>18:00</span> - <span class=calendar id=tue-18>Top Picks</span></a>
 		  <a href="#eveningchill"><span class=third-time>19:00</span> - <span class=calendar id=tue-19>Evening Chill</span></a>
 		  <a href="#eveningchill"><span class=third-time>20:00</span> - <span class=calendar id=tue-20>Evening Chill</span></a>
 		  <a href="#eveningchill"><span class=third-time>21:00</span> - <span class=calendar id=tue-21>Evening Chill</span></a>
 		  <a href="#eveningchill"><span class=third-time>22:00</span> - <span class=calendar id=tue-22>Evening Chill</span></a>
-		  <a href="#eveningchill"><span class=third-time>23:00</span> - <span class=calendar id=tue-23>Evening Chill</span></a>
+		  <a href="#vaporwave"><span class=third-time>23:00</span> - <span class=calendar id=tue-23>Vaporwave</span></a>
 		</div>
 	    <div class=third-day>
 		  <h1>Wed</h1>
-		  <a href="#eveningchill"><span class=third-time>00:00</span> - <span class=calendar id=wed-00>Evening Chill</span></a>
-		  <a href="#eveningchill"><span class=third-time>01:00</span> - <span class=calendar id=wed-01>Evening Chill</span></a>
-		  <a href="#eveningchill"><span class=third-time>02:00</span> - <span class=calendar id=wed-01>Evening Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>03:00</span> - <span class=calendar id=wed-03>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>04:00</span> - <span class=calendar id=wed-04>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>05:00</span> - <span class=calendar id=wed-05>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>06:00</span> - <span class=calendar id=wed-06>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>07:00</span> - <span class=calendar id=wed-07>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>08:00</span> - <span class=calendar id=wed-08>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>09:00</span> - <span class=calendar id=wed-09>Morning Chill</span></a>
-		  <a><span class=third-time>10:00</span> - <span class=calendar id=wed-10>Alpha</span></a>
-		  <a><span class=third-time>11:00</span> - <span class=calendar id=wed-11>Alpha</span></a>
-		  <a><span class=third-time>12:00</span> - <span class=calendar id=wed-12>Alpha</span></a>
-		  <a><span class=third-time>13:00</span> - <span class=calendar id=wed-13>Alpha</span></a>
-		  <a><span class=third-time>14:00</span> - <span class=calendar id=wed-14>Alpha</span></a>
+		  <a href="#vaporwave"><span class=third-time>00:00</span> - <span class=calendar id=wed-00>Vaporwave</span></a>
+		  <a href="#vaporwave"><span class=third-time>01:00</span> - <span class=calendar id=wed-01>Vaporwave</span></a>
+		  <a href="#vaporwave"><span class=third-time>02:00</span> - <span class=calendar id=wed-01>Vaporwave</span></a>
+		  <a href="#vaporwave"><span class=third-time>03:00</span> - <span class=calendar id=wed-03>Vaporwave</span></a>
+		  <a href="#tripsketch"><span class=third-time>04:00</span> - <span class=calendar id=wed-04>Tripsketch</span></a>
+		  <a href="#woke"><span class=third-time>05:00</span> - <span class=calendar id=wed-05>Woke</span></a>
+		  <a href="#woke"><span class=third-time>06:00</span> - <span class=calendar id=wed-06>Woke</span></a>
+		  <a href="#woke"><span class=third-time>07:00</span> - <span class=calendar id=wed-07>Woke</span></a>
+		  <a href="#woke"><span class=third-time>08:00</span> - <span class=calendar id=wed-08>Woke</span></a>
+		  <a href="#woke"><span class=third-time>09:00</span> - <span class=calendar id=wed-09>Woke</span></a>
+		  <a href="#highway"><span class=third-time>10:00</span> - <span class=calendar id=wed-10>Highway</span></a>
+		  <a href="#highway"><span class=third-time>11:00</span> - <span class=calendar id=wed-11>Highway</span></a>
+		  <a href="#highway"><span class=third-time>12:00</span> - <span class=calendar id=wed-12>Highway</span></a>
+		  <a href="#highway"><span class=third-time>13:00</span> - <span class=calendar id=wed-13>Highway</span></a>
+		  <a href="#highway"><span class=third-time>14:00</span> - <span class=calendar id=wed-14>Highway</span></a>
 		  <a href="#afternoonride"><span class=third-time>15:00</span> - <span class=calendar id=wed-15>Afternoon Ride</span></a>
 		  <a href="#afternoonride"><span class=third-time>16:00</span> - <span class=calendar id=wed-16>Afternoon Ride</span></a>
 		  <a href="#afternoonride"><span class=third-time>17:00</span> - <span class=calendar id=wed-17>Afternoon Ride</span></a>
-		  <a><span class=third-time>18:00</span> - <span class=calendar id=wed-18>Alpha</span></a>
+		  <a href="#toppicks"><span class=third-time>18:00</span> - <span class=calendar id=wed-18>Top Picks</span></a>
 		  <a href="#eveningchill"><span class=third-time>19:00</span> - <span class=calendar id=wed-19>Evening Chill</span></a>
 		  <a href="#eveningchill"><span class=third-time>20:00</span> - <span class=calendar id=wed-20>Evening Chill</span></a>
 		  <a href="#eveningchill"><span class=third-time>21:00</span> - <span class=calendar id=wed-21>Evening Chill</span></a>
 		  <a href="#eveningchill"><span class=third-time>22:00</span> - <span class=calendar id=wed-22>Evening Chill</span></a>
-		  <a href="#eveningchill"><span class=third-time>23:00</span> - <span class=calendar id=wed-23>Evening Chill</span></a>
+		  <a href="#vaporwave"><span class=third-time>23:00</span> - <span class=calendar id=wed-23>Vaporwave</span></a>
 		</div>
 	    <div class=third-day>
 		  <h1>Thu</h1>
-		  <a href="#eveningchill"><span class=third-time>00:00</span> - <span class=calendar id=thu-00>Evening Chill</span></a>
-		  <a href="#eveningchill"><span class=third-time>01:00</span> - <span class=calendar id=thu-01>Evening Chill</span></a>
-		  <a href="#eveningchill"><span class=third-time>02:00</span> - <span class=calendar id=thu-01>Evening Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>03:00</span> - <span class=calendar id=thu-03>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>04:00</span> - <span class=calendar id=thu-04>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>05:00</span> - <span class=calendar id=thu-05>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>06:00</span> - <span class=calendar id=thu-06>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>07:00</span> - <span class=calendar id=thu-07>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>08:00</span> - <span class=calendar id=thu-08>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>09:00</span> - <span class=calendar id=thu-09>Morning Chill</span></a>
-		  <a><span class=third-time>10:00</span> - <span class=calendar id=thu-10>Alpha</span></a>
-		  <a><span class=third-time>11:00</span> - <span class=calendar id=thu-11>Alpha</span></a>
-		  <a><span class=third-time>12:00</span> - <span class=calendar id=thu-12>Alpha</span></a>
-		  <a><span class=third-time>13:00</span> - <span class=calendar id=thu-13>Alpha</span></a>
-		  <a><span class=third-time>14:00</span> - <span class=calendar id=thu-14>Alpha</span></a>
+		  <a href="#vaporwave"><span class=third-time>00:00</span> - <span class=calendar id=thu-00>Vaporwave</span></a>
+		  <a href="#vaporwave"><span class=third-time>01:00</span> - <span class=calendar id=thu-01>Vaporwave</span></a>
+		  <a href="#vaporwave"><span class=third-time>02:00</span> - <span class=calendar id=thu-01>Vaporwave</span></a>
+		  <a href="#vaporwave"><span class=third-time>03:00</span> - <span class=calendar id=thu-03>Vaporwave</span></a>
+		  <a href="#tripsketch"><span class=third-time>04:00</span> - <span class=calendar id=thu-04>Tripsketch</span></a>
+		  <a href="#woke"><span class=third-time>05:00</span> - <span class=calendar id=thu-05>Woke</span></a>
+		  <a href="#woke"><span class=third-time>06:00</span> - <span class=calendar id=thu-06>Woke</span></a>
+		  <a href="#woke"><span class=third-time>07:00</span> - <span class=calendar id=thu-07>Woke</span></a>
+		  <a href="#woke"><span class=third-time>08:00</span> - <span class=calendar id=thu-08>Woke</span></a>
+		  <a href="#woke"><span class=third-time>09:00</span> - <span class=calendar id=thu-09>Woke</span></a>
+		  <a href="#highway"><span class=third-time>10:00</span> - <span class=calendar id=thu-10>Highway</span></a>
+		  <a href="#highway"><span class=third-time>11:00</span> - <span class=calendar id=thu-11>Highway</span></a>
+		  <a href="#highway"><span class=third-time>12:00</span> - <span class=calendar id=thu-12>Highway</span></a>
+		  <a href="#highway"><span class=third-time>13:00</span> - <span class=calendar id=thu-13>Highway</span></a>
+		  <a href="#highway"><span class=third-time>14:00</span> - <span class=calendar id=thu-14>Highway</span></a>
 		  <a href="#afternoonride"><span class=third-time>15:00</span> - <span class=calendar id=thu-15>Afternoon Ride</span></a>
 		  <a href="#afternoonride"><span class=third-time>16:00</span> - <span class=calendar id=thu-16>Afternoon Ride</span></a>
 		  <a href="#afternoonride"><span class=third-time>17:00</span> - <span class=calendar id=thu-17>Afternoon Ride</span></a>
-		  <a><span class=third-time>18:00</span> - <span class=calendar id=thu-18>Alpha</span></a>
+		  <a href="#toppicks"><span class=third-time>18:00</span> - <span class=calendar id=thu-18>Top Picks</span></a>
 		  <a href="#eveningchill"><span class=third-time>19:00</span> - <span class=calendar id=thu-19>Evening Chill</span></a>
 		  <a href="#eveningchill"><span class=third-time>20:00</span> - <span class=calendar id=thu-20>Evening Chill</span></a>
 		  <a href="#eveningchill"><span class=third-time>21:00</span> - <span class=calendar id=thu-21>Evening Chill</span></a>
 		  <a href="#eveningchill"><span class=third-time>22:00</span> - <span class=calendar id=thu-22>Evening Chill</span></a>
-		  <a href="#eveningchill"><span class=third-time>23:00</span> - <span class=calendar id=thu-23>Evening Chill</span></a>
+		  <a href="#vaporwave"><span class=third-time>23:00</span> - <span class=calendar id=thu-23>Vaporwave</span></a>
 		</div>
 	    <div class=third-day>
 		  <h1>Fri</h1>
-		  <a href="#eveningchill"><span class=third-time>00:00</span> - <span class=calendar id=fri-00>Evening Chill</span></a>
-		  <a href="#eveningchill"><span class=third-time>01:00</span> - <span class=calendar id=fri-01>Evening Chill</span></a>
-		  <a href="#eveningchill"><span class=third-time>02:00</span> - <span class=calendar id=fri-01>Evening Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>03:00</span> - <span class=calendar id=fri-03>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>04:00</span> - <span class=calendar id=fri-04>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>05:00</span> - <span class=calendar id=fri-05>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>06:00</span> - <span class=calendar id=fri-06>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>07:00</span> - <span class=calendar id=fri-07>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>08:00</span> - <span class=calendar id=fri-08>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>09:00</span> - <span class=calendar id=fri-09>Morning Chill</span></a>
-		  <a><span class=third-time>10:00</span> - <span class=calendar id=fri-10>Alpha</span></a>
-		  <a><span class=third-time>11:00</span> - <span class=calendar id=fri-11>Alpha</span></a>
-		  <a><span class=third-time>12:00</span> - <span class=calendar id=fri-12>Alpha</span></a>
-		  <a><span class=third-time>13:00</span> - <span class=calendar id=fri-13>Alpha</span></a>
-		  <a><span class=third-time>14:00</span> - <span class=calendar id=fri-14>Alpha</span></a>
+		  <a href="#vaporwave"><span class=third-time>00:00</span> - <span class=calendar id=fri-00>Vaporwave</span></a>
+		  <a href="#vaporwave"><span class=third-time>01:00</span> - <span class=calendar id=fri-01>Vaporwave</span></a>
+		  <a href="#vaporwave"><span class=third-time>02:00</span> - <span class=calendar id=fri-01>Vaporwave</span></a>
+		  <a href="#vaporwave"><span class=third-time>03:00</span> - <span class=calendar id=fri-03>Vaporwave</span></a>
+		  <a href="#tripsketch"><span class=third-time>04:00</span> - <span class=calendar id=fri-04>Tripsketch</span></a>
+		  <a href="#woke"><span class=third-time>05:00</span> - <span class=calendar id=fri-05>Woke</span></a>
+		  <a href="#woke"><span class=third-time>06:00</span> - <span class=calendar id=fri-06>Woke</span></a>
+		  <a href="#woke"><span class=third-time>07:00</span> - <span class=calendar id=fri-07>Woke</span></a>
+		  <a href="#woke"><span class=third-time>08:00</span> - <span class=calendar id=fri-08>Woke</span></a>
+		  <a href="#woke"><span class=third-time>09:00</span> - <span class=calendar id=fri-09>Woke</span></a>
+		  <a href="#highway"><span class=third-time>10:00</span> - <span class=calendar id=fri-10>Highway</span></a>
+		  <a href="#highway"><span class=third-time>11:00</span> - <span class=calendar id=fri-11>Highway</span></a>
+		  <a href="#highway"><span class=third-time>12:00</span> - <span class=calendar id=fri-12>Highway</span></a>
+		  <a href="#highway"><span class=third-time>13:00</span> - <span class=calendar id=fri-13>Highway</span></a>
+		  <a href="#highway"><span class=third-time>14:00</span> - <span class=calendar id=fri-14>Highway</span></a>
 		  <a href="#afternoonride"><span class=third-time>15:00</span> - <span class=calendar id=fri-15>Afternoon Ride</span></a>
 		  <a href="#afternoonride"><span class=third-time>16:00</span> - <span class=calendar id=fri-16>Afternoon Ride</span></a>
 		  <a href="#afternoonride"><span class=third-time>17:00</span> - <span class=calendar id=fri-17>Afternoon Ride</span></a>
-		  <a><span class=third-time>18:00</span> - <span class=calendar id=fri-18>Alpha</span></a>
+		  <a href="#toppicks"><span class=third-time>18:00</span> - <span class=calendar id=fri-18>Top Picks</span></a>
 		  <a href="#eveningchill"><span class=third-time>19:00</span> - <span class=calendar id=fri-19>Evening Chill</span></a>
 		  <a href="#eveningchill"><span class=third-time>20:00</span> - <span class=calendar id=fri-20>Evening Chill</span></a>
 		  <a href="#eveningchill"><span class=third-time>21:00</span> - <span class=calendar id=fri-21>Evening Chill</span></a>
 		  <a href="#eveningchill"><span class=third-time>22:00</span> - <span class=calendar id=fri-22>Evening Chill</span></a>
-		  <a href="#eveningchill"><span class=third-time>23:00</span> - <span class=calendar id=fri-23>Evening Chill</span></a>
+		  <a href="#vaporwave"><span class=third-time>23:00</span> - <span class=calendar id=fri-23>Vaporwave</span></a>
 		</div>
 	    <div class=third-day>
 		  <h1>Sat</h1>
-		  <a href="#eveningchill"><span class=third-time>00:00</span> - <span class=calendar id=sat-00>Evening Chill</span></a>
-		  <a href="#eveningchill"><span class=third-time>01:00</span> - <span class=calendar id=sat-01>Evening Chill</span></a>
-		  <a href="#eveningchill"><span class=third-time>02:00</span> - <span class=calendar id=sat-01>Evening Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>03:00</span> - <span class=calendar id=sat-03>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>04:00</span> - <span class=calendar id=sat-04>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>05:00</span> - <span class=calendar id=sat-05>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>06:00</span> - <span class=calendar id=sat-06>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>07:00</span> - <span class=calendar id=sat-07>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>08:00</span> - <span class=calendar id=sat-08>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>09:00</span> - <span class=calendar id=sat-09>Morning Chill</span></a>
-		  <a><span class=third-time>10:00</span> - <span class=calendar id=sat-10>Alpha</span></a>
-		  <a><span class=third-time>11:00</span> - <span class=calendar id=sat-11>Alpha</span></a>
-		  <a><span class=third-time>12:00</span> - <span class=calendar id=sat-12>Alpha</span></a>
-		  <a><span class=third-time>13:00</span> - <span class=calendar id=sat-13>Alpha</span></a>
-		  <a><span class=third-time>14:00</span> - <span class=calendar id=sat-14>Alpha</span></a>
+		  <a href="#vaporwave"><span class=third-time>00:00</span> - <span class=calendar id=sat-00>Vaporwave</span></a>
+		  <a href="#vaporwave"><span class=third-time>01:00</span> - <span class=calendar id=sat-01>Vaporwave</span></a>
+		  <a href="#vaporwave"><span class=third-time>02:00</span> - <span class=calendar id=sat-01>Vaporwave</span></a>
+		  <a href="#vaporwave"><span class=third-time>03:00</span> - <span class=calendar id=sat-03>Vaporwave</span></a>
+		  <a href="#tripsketch"><span class=third-time>04:00</span> - <span class=calendar id=sat-04>Tripsketch</span></a>
+		  <a href="#woke"><span class=third-time>05:00</span> - <span class=calendar id=sat-05>Woke</span></a>
+		  <a href="#woke"><span class=third-time>06:00</span> - <span class=calendar id=sat-06>Woke</span></a>
+		  <a href="#woke"><span class=third-time>07:00</span> - <span class=calendar id=sat-07>Woke</span></a>
+		  <a href="#woke"><span class=third-time>08:00</span> - <span class=calendar id=sat-08>Woke</span></a>
+		  <a href="#woke"><span class=third-time>09:00</span> - <span class=calendar id=sat-09>Woke</span></a>
+		  <a href="#highway"><span class=third-time>10:00</span> - <span class=calendar id=sat-10>Highway</span></a>
+		  <a href="#highway"><span class=third-time>11:00</span> - <span class=calendar id=sat-11>Highway</span></a>
+		  <a href="#highway"><span class=third-time>12:00</span> - <span class=calendar id=sat-12>Highway</span></a>
+		  <a href="#highway"><span class=third-time>13:00</span> - <span class=calendar id=sat-13>Highway</span></a>
+		  <a href="#highway"><span class=third-time>14:00</span> - <span class=calendar id=sat-14>Highway</span></a>
 		  <a href="#afternoonride"><span class=third-time>15:00</span> - <span class=calendar id=sat-15>Afternoon Ride</span></a>
 		  <a href="#afternoonride"><span class=third-time>16:00</span> - <span class=calendar id=sat-16>Afternoon Ride</span></a>
 		  <a href="#afternoonride"><span class=third-time>17:00</span> - <span class=calendar id=sat-17>Afternoon Ride</span></a>
-		  <a><span class=third-time>18:00</span> - <span class=calendar id=sat-18>Alpha</span></a>
+		  <a href="#toppicks"><span class=third-time>18:00</span> - <span class=calendar id=sat-18>Top Picks</span></a>
 		  <a href="#eveningchill"><span class=third-time>19:00</span> - <span class=calendar id=sat-19>Evening Chill</span></a>
 		  <a href="#eveningchill"><span class=third-time>20:00</span> - <span class=calendar id=sat-20>Evening Chill</span></a>
 		  <a href="#eveningchill"><span class=third-time>21:00</span> - <span class=calendar id=sat-21>Evening Chill</span></a>
 		  <a href="#eveningchill"><span class=third-time>22:00</span> - <span class=calendar id=sat-22>Evening Chill</span></a>
-		  <a href="#eveningchill"><span class=third-time>23:00</span> - <span class=calendar id=sat-23>Evening Chill</span></a>
+		  <a href="#vaporwave"><span class=third-time>23:00</span> - <span class=calendar id=sat-23>Vaporwave</span></a>
 		</div>
 	    <div class=third-day>
 		  <h1>Sun</h1>
-		  <a href="#eveningchill"><span class=third-time>00:00</span> - <span class=calendar id=sun-00>Evening Chill</span></a>
-		  <a href="#eveningchill"><span class=third-time>01:00</span> - <span class=calendar id=sun-01>Evening Chill</span></a>
-		  <a href="#eveningchill"><span class=third-time>02:00</span> - <span class=calendar id=sun-01>Evening Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>03:00</span> - <span class=calendar id=sun-03>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>04:00</span> - <span class=calendar id=sun-04>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>05:00</span> - <span class=calendar id=sun-05>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>06:00</span> - <span class=calendar id=sun-06>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>07:00</span> - <span class=calendar id=sun-07>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>08:00</span> - <span class=calendar id=sun-08>Morning Chill</span></a>
-		  <a href="#morningchill"><span class=third-time>09:00</span> - <span class=calendar id=sun-09>Morning Chill</span></a>
-		  <a><span class=third-time>10:00</span> - <span class=calendar id=sun-10>Alpha</span></a>
-		  <a><span class=third-time>11:00</span> - <span class=calendar id=sun-11>Alpha</span></a>
-		  <a><span class=third-time>12:00</span> - <span class=calendar id=sun-12>Alpha</span></a>
-		  <a><span class=third-time>13:00</span> - <span class=calendar id=sun-13>Alpha</span></a>
-		  <a><span class=third-time>14:00</span> - <span class=calendar id=sun-14>Alpha</span></a>
+		  <a href="#vaporwave"><span class=third-time>00:00</span> - <span class=calendar id=sun-00>Vaporwave</span></a>
+		  <a href="#vaporwave"><span class=third-time>01:00</span> - <span class=calendar id=sun-01>Vaporwave</span></a>
+		  <a href="#vaporwave"><span class=third-time>02:00</span> - <span class=calendar id=sun-01>Vaporwave</span></a>
+		  <a href="#vaporwave"><span class=third-time>03:00</span> - <span class=calendar id=sun-03>Vaporwave</span></a>
+		  <a href="#tripsketch"><span class=third-time>04:00</span> - <span class=calendar id=sun-04>Tripsketch</span></a>
+		  <a href="#woke"><span class=third-time>05:00</span> - <span class=calendar id=sun-05>Woke</span></a>
+		  <a href="#woke"><span class=third-time>06:00</span> - <span class=calendar id=sun-06>Woke</span></a>
+		  <a href="#woke"><span class=third-time>07:00</span> - <span class=calendar id=sun-07>Woke</span></a>
+		  <a href="#woke"><span class=third-time>08:00</span> - <span class=calendar id=sun-08>Woke</span></a>
+		  <a href="#woke"><span class=third-time>09:00</span> - <span class=calendar id=sun-09>Woke</span></a>
+		  <a href="#highway"><span class=third-time>10:00</span> - <span class=calendar id=sun-10>Highway</span></a>
+		  <a href="#highway"><span class=third-time>11:00</span> - <span class=calendar id=sun-11>Highway</span></a>
+		  <a href="#highway"><span class=third-time>12:00</span> - <span class=calendar id=sun-12>Highway</span></a>
+		  <a href="#highway"><span class=third-time>13:00</span> - <span class=calendar id=sun-13>Highway</span></a>
+		  <a href="#highway"><span class=third-time>14:00</span> - <span class=calendar id=sun-14>Highway</span></a>
 		  <a href="#afternoonride"><span class=third-time>15:00</span> - <span class=calendar id=sun-15>Afternoon Ride</span></a>
 		  <a href="#afternoonride"><span class=third-time>16:00</span> - <span class=calendar id=sun-16>Afternoon Ride</span></a>
 		  <a href="#afternoonride"><span class=third-time>17:00</span> - <span class=calendar id=sun-17>Afternoon Ride</span></a>
-		  <a><span class=third-time>18:00</span> - <span class=calendar id=sun-18>Alpha</span></a>
+		  <a href="#toppicks"><span class=third-time>18:00</span> - <span class=calendar id=sun-18>Top Picks</span></a>
 		  <a href="#eveningchill"><span class=third-time>19:00</span> - <span class=calendar id=sun-19>Evening Chill</span></a>
 		  <a href="#eveningchill"><span class=third-time>20:00</span> - <span class=calendar id=sun-20>Evening Chill</span></a>
 		  <a href="#eveningchill"><span class=third-time>21:00</span> - <span class=calendar id=sun-21>Evening Chill</span></a>
 		  <a href="#eveningchill"><span class=third-time>22:00</span> - <span class=calendar id=sun-22>Evening Chill</span></a>
-		  <a href="#eveningchill"><span class=third-time>23:00</span> - <span class=calendar id=sun-23>Evening Chill</span></a>
+		  <a href="#vaporwave"><span class=third-time>23:00</span> - <span class=calendar id=sun-23>Vaporwave</span></a>
 		</div>
 	  </div>
 	</div>
@@ -317,12 +322,12 @@
 	<br>
 	<br>
 	<div id=fifth>
-	  <h1 id=shows-title>Shows and Music</h1>
+	  <h1 id=shows-title>Music</h1>
 	  <div id=shows style="position:relative;top:-300px"></div>
 	  <div class=fifth-show style="background-image: url('./style/images/shows/Tripsketch.jpg')"><div class=fifth-anchor id=tripsketch></div></div>
 	  <div class=fifth-show style="background-image: url('./style/images/shows/Evening Chill.jpg')"><div class=fifth-anchor id=eveningchill></div></div>
-	  <div class=fifth-show style="background-image: url('./style/images/shows/Morning Chill.jpg')"><div class=fifth-anchor id=morningchill></div></div>
-	  <div class=fifth-show style="background-image: url('./style/images/shows/afternoonride.png')"><div class=fifth-anchor id=afternoonride></div></div>
+	  <div class=fifth-show style="background-image: url('./style/images/shows/Woke.jpg')"><div class=fifth-anchor id=woke></div></div>
+	  <div class=fifth-show style="background-image: url('./style/images/shows/Vaporwave.jpg')"><div class=fifth-anchor id=vaporwave></div></div>
 	</div>
 	<br>
 	<br>

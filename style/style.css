@@ -435,13 +435,42 @@ body {
 	opacity: 0.4;
 }
 
-#navbar-desktoplike {
-	height: 30px;
+#navbar-desktopquality {
+	height: 40px;
 	overflow: hidden;
 	border: none;
 	float: left;
 	width: 100px;
 	display: none;
+	color: rgb(76.5,76.5,76.5);
+	font-family: lemonmilk;
+	position: relative;
+	top: -5px;
+	cursor: default;
+}
+
+#navbar-desktopquality h2 {
+	margin: 0px;
+	font-size: 1em;
+	margin-left: 3px;
+}
+
+.navbar-quality {
+	margin: 0px;
+	font-size: 0.7em;
+	position: relative;
+	top: -7px;
+	cursor: pointer;
+}
+
+.navbar-quality-selected {
+	border-bottom: 1px solid red;
+	margin: 0px;
+	font-size: 0.7em;
+	position: relative;
+	top: -7px;
+	cursor: pointer;
+	padding-bottom: -4px;
 }
 
 #navbar-desktopview {
@@ -451,9 +480,11 @@ body {
 	float: left;
 	width: 100px;
 	display: none;
+	position: relative;
+	top: -5px;
 }
 
-#navbar:hover #navbar-desktopcontrol, #navbar:hover #navbar-desktoplike, #navbar:hover #navbar-desktoppopout,  #navbar:hover #navbar-desktopview {
+#navbar:hover #navbar-desktopcontrol, #navbar:hover #navbar-desktopquality, #navbar:hover #navbar-desktoppopout,  #navbar:hover #navbar-desktopview {
 	display: inline-block;
 }
 
@@ -804,6 +835,7 @@ body {
 	border: 3px solid white;
 	transition: 0.6s;
 	background-repeat: no-repeat;
+	cursor: pointer;
 }
 
 .fourth-event p a {
@@ -867,7 +899,7 @@ body {
 	width: 300px;
 	height: 300px;
 	margin: 20px;
-	background-color: white;
+	background-color: black;
 	display: inline-block;
 	background-size: cover;
 	background-position: center;
@@ -878,6 +910,7 @@ body {
 	-ms-user-select: none;
 	transition: 0.2s;
 	border: 2px solid transparent;
+	background-repeat: no-repeat;
 }
 
 .fifth-anchor {
