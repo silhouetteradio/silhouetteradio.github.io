@@ -45,8 +45,14 @@
   <div style="scroll-behavior:smooth">
     <audio id=stream src="https://str2b.openstream.co/1035?aw_0_1st.stationid=3849&aw_0_1st.publisherId=1059&aw_0_1st.serverId=str2b" autostart="0"></audio>
 	<!--<audio id=stream2 src="https://str2b.openstream.co/1036?aw_0_1st.stationid=3850&aw_0_1st.publisherId=1060&aw_0_1st.serverId=str2b" autostart="0"></audio>-->
-	<img src="back.png" style="display: none" id=top>
+	<div id=widthdetect></div>
 	<div id=scroll></div>
+    <div id=navbar-completecontainer>
+    <div id=navbar-mobilequality>
+      <h2>Quality</h2>
+      <a class="navbar-q navbar-quality" onClick="qualityHigh()">High</a>
+		  <a class="navbar-q navbar-quality-selected" onClick="qualityMedium()">Medium</a>
+    </div>
     <div id=navbar>
 	  <div id=navbar-bottom></div>
 	  <div id=navbar-linkcontainer>
@@ -75,6 +81,7 @@
 		<iframe id=navbar-desktopview src="https://php-additions.silhouette.repl.co/php/hits.php" style="overflow:hidden" scroll="no"></iframe>
 	  </div>
 	</div>
+  </div>
    <!-- <div id=request>
 	  <div onClick="requestClose()"></div>
 	  <iframe src="./request/index.html"></iframe>
@@ -127,6 +134,7 @@
 		<div id=lineup></div>
 	    <div class=third-day>
 		  <h1>Mon</h1>
+      <div class="third-day-button" onClick="dayOpen(1)"></div>
 		  <a href="#vaporwave"><span class=third-time>00:00</span> - <span class=calendar id=mon-00>Vaporwave</span></a>
 		  <a href="#vaporwave"><span class=third-time>01:00</span> - <span class=calendar id=mon-01>Vaporwave</span></a>
 		  <a href="#vaporwave"><span class=third-time>02:00</span> - <span class=calendar id=mon-01>Vaporwave</span></a>
@@ -154,6 +162,7 @@
 		</div>
 	    <div class=third-day>
 		  <h1>Tue</h1>
+      <div class="third-day-button" onClick="dayOpen(2)"></div>
 		  <a href="#vaporwave"><span class=third-time>00:00</span> - <span class=calendar id=tue-00>Vaporwave</span></a>
 		  <a href="#vaporwave"><span class=third-time>01:00</span> - <span class=calendar id=tue-01>Vaporwave</span></a>
 		  <a href="#vaporwave"><span class=third-time>02:00</span> - <span class=calendar id=tue-01>Vaporwave</span></a>
@@ -181,6 +190,7 @@
 		</div>
 	    <div class=third-day>
 		  <h1>Wed</h1>
+      <div class="third-day-button" onClick="dayOpen(3)"></div>
 		  <a href="#vaporwave"><span class=third-time>00:00</span> - <span class=calendar id=wed-00>Vaporwave</span></a>
 		  <a href="#vaporwave"><span class=third-time>01:00</span> - <span class=calendar id=wed-01>Vaporwave</span></a>
 		  <a href="#vaporwave"><span class=third-time>02:00</span> - <span class=calendar id=wed-01>Vaporwave</span></a>
@@ -208,6 +218,7 @@
 		</div>
 	    <div class=third-day>
 		  <h1>Thu</h1>
+      <div class="third-day-button" onClick="dayOpen(4)"></div>
 		  <a href="#vaporwave"><span class=third-time>00:00</span> - <span class=calendar id=thu-00>Vaporwave</span></a>
 		  <a href="#vaporwave"><span class=third-time>01:00</span> - <span class=calendar id=thu-01>Vaporwave</span></a>
 		  <a href="#vaporwave"><span class=third-time>02:00</span> - <span class=calendar id=thu-01>Vaporwave</span></a>
@@ -235,6 +246,7 @@
 		</div>
 	    <div class=third-day>
 		  <h1>Fri</h1>
+      <div class="third-day-button" onClick="dayOpen(5)"></div>
 		  <a href="#vaporwave"><span class=third-time>00:00</span> - <span class=calendar id=fri-00>Vaporwave</span></a>
 		  <a href="#vaporwave"><span class=third-time>01:00</span> - <span class=calendar id=fri-01>Vaporwave</span></a>
 		  <a href="#vaporwave"><span class=third-time>02:00</span> - <span class=calendar id=fri-01>Vaporwave</span></a>
@@ -262,6 +274,7 @@
 		</div>
 	    <div class=third-day>
 		  <h1>Sat</h1>
+      <div class="third-day-button" onClick="dayOpen(6)"></div>
 		  <a href="#vaporwave"><span class=third-time>00:00</span> - <span class=calendar id=sat-00>Vaporwave</span></a>
 		  <a href="#vaporwave"><span class=third-time>01:00</span> - <span class=calendar id=sat-01>Vaporwave</span></a>
 		  <a href="#vaporwave"><span class=third-time>02:00</span> - <span class=calendar id=sat-01>Vaporwave</span></a>
@@ -289,6 +302,7 @@
 		</div>
 	    <div class=third-day>
 		  <h1>Sun</h1>
+      <div class="third-day-button" onClick="dayOpen(7)"></div>
 		  <a href="#vaporwave"><span class=third-time>00:00</span> - <span class=calendar id=sun-00>Vaporwave</span></a>
 		  <a href="#vaporwave"><span class=third-time>01:00</span> - <span class=calendar id=sun-01>Vaporwave</span></a>
 		  <a href="#vaporwave"><span class=third-time>02:00</span> - <span class=calendar id=sun-01>Vaporwave</span></a>

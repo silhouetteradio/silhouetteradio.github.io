@@ -3,6 +3,7 @@ var heightOffset;
 var quality = 0;
 var pageLoaded = 0;
 var pageTimer = 0;
+var cycleVar = -1;
 
 document.documentElement.style.overflowY = 'hidden';
 
@@ -26,7 +27,6 @@ window.onload = function() {
 		qualityMedium();
 	}
 };
-
 setInterval(function() {
 	if ( document.documentElement.scrollTop == 0) {
 		document.getElementById('navbar-bottom').style.opacity = '0';
@@ -66,6 +66,38 @@ setInterval(function() {
 		document.getElementsByClassName('navbar-link')[0].style.borderBottom = '2px solid red';
 		document.getElementsByClassName('navbar-link')[1].style.borderBottom = '2px solid transparent';
 	}
+
+  if (document.documentElement.clientWidth > 583) {
+    document.getElementById('navbar-completecontainer').style.top = "-45px";
+  }
+  if (document.documentElement.scrollTop == 0) {
+    document.getElementById('navbar-completecontainer').style.top = "-45px";
+  }
+  if (document.documentElement.clientWidth > 983) {
+    document.getElementsByClassName("third-day")[0].style.height = "560px";
+    document.getElementsByClassName("third-day")[1].style.height = "560px";
+    document.getElementsByClassName("third-day")[2].style.height = "560px";
+    document.getElementsByClassName("third-day")[3].style.height = "560px";
+    document.getElementsByClassName("third-day")[4].style.height = "560px";
+    document.getElementsByClassName("third-day")[5].style.height = "560px";
+    document.getElementsByClassName("third-day")[6].style.height = "560px";
+  } else {
+    cycleVar = cycleVar + 1;
+    if (cycleVar > 6) {
+      cycleVar = 0;
+    }
+    if (document.getElementsByClassName('third-day-button')[cycleVar].clientHeight == 32) {
+      document.getElementsByClassName("third-day")[cycleVar].style.height = "560px";
+      document.getElementsByClassName("third-day-button")[cycleVar].style.height = "32px";
+      document.getElementsByClassName("third-day-button")[cycleVar].style.backgroundImage = "url('./style/images/minus.svg')";
+      document.getElementsByClassName("third-day-button")[cycleVar].style.transform = "rotate(360deg)";
+    } else {
+      document.getElementsByClassName("third-day")[cycleVar].style.height = "42px";
+      document.getElementsByClassName("third-day-button")[cycleVar].style.height = "33px";
+      document.getElementsByClassName("third-day-button")[cycleVar].style.backgroundImage = "url('./style/images/plus.svg')";
+      document.getElementsByClassName("third-day-button")[cycleVar].style.transform = "rotate(0deg)";
+    }
+  }
 }, 0);
 
 
@@ -157,6 +189,8 @@ document.getElementsByClassName("third-day")[calendarDay - 1].setAttribute("clas
 function qualityHigh() {
 	document.getElementsByClassName("navbar-q")[0].setAttribute("class", "navbar-q navbar-quality-selected");
 	document.getElementsByClassName("navbar-q")[1].setAttribute("class", "navbar-q navbar-quality");
+  document.getElementsByClassName("navbar-q")[2].setAttribute("class", "navbar-q navbar-quality-selected");
+	document.getElementsByClassName("navbar-q")[3].setAttribute("class", "navbar-q navbar-quality");
 	stream.src = "https://str2b.openstream.co/1036?aw_0_1st.stationid=3850&aw_0_1st.publisherId=1060&aw_0_1st.serverId=str2b";
 	stream.load();
 	stream.play();
@@ -164,9 +198,51 @@ function qualityHigh() {
 
 function qualityMedium() {
 	document.getElementsByClassName("navbar-q")[1].setAttribute("class", "navbar-q navbar-quality-selected");
-	quality = 0;
 	document.getElementsByClassName("navbar-q")[0].setAttribute("class", "navbar-q navbar-quality");
+  document.getElementsByClassName("navbar-q")[3].setAttribute("class", "navbar-q navbar-quality-selected");
+	document.getElementsByClassName("navbar-q")[2].setAttribute("class", "navbar-q navbar-quality");
 	stream.src = "https://str2b.openstream.co/1035?aw_0_1st.stationid=3849&aw_0_1st.publisherId=1059&aw_0_1st.serverId=str2b";
 	stream.load();
 	stream.play();
 }
+
+document.getElementsByClassName("third-day")[calendarDay - 1].style.height = "560px";
+document.getElementsByClassName("third-day-button")[calendarDay - 1].style.height = "32px";
+document.getElementsByClassName("third-day-button")[calendarDay - 1].style.backgroundImage = "url('./style/images/minus.svg')";
+document.getElementsByClassName("third-day-button")[calendarDay - 1].style.transform = "rotate(360deg)";
+function dayOpen(day) {
+  if (document.getElementsByClassName("third-day-button")[day - 1].clientHeight == 33) {
+    document.getElementsByClassName("third-day")[day - 1].style.height = "560px";
+    document.getElementsByClassName("third-day-button")[day - 1].style.height = "32px";
+    document.getElementsByClassName("third-day-button")[day - 1].style.backgroundImage = "url('./style/images/minus.svg')";
+    document.getElementsByClassName("third-day-button")[day - 1].style.transform = "rotate(360deg)";
+  } else {
+    document.getElementsByClassName("third-day")[day - 1].style.height = "42px";
+    document.getElementsByClassName("third-day-button")[day - 1].style.height = "33px";
+    document.getElementsByClassName("third-day-button")[day - 1].style.backgroundImage = "url('./style/images/plus.svg')";
+    document.getElementsByClassName("third-day-button")[day - 1].style.transform = "rotate(0deg)";
+  }
+}
+
+
+function scrollDetect(){
+  var lastScroll = 0;
+
+  window.onscroll = function() {
+      let currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+      if (currentScroll > 0 && lastScroll <= currentScroll){
+        lastScroll = currentScroll;
+        document.getElementById('navbar-completecontainer').style.top = "-45px";
+      }else{
+        lastScroll = currentScroll;
+        document.getElementById('navbar-completecontainer').style.top = "0px";
+      }
+      if (document.documentElement.clientWidth > 583) {
+        document.getElementById('navbar-completecontainer').style.top = "-45px";
+      }
+  };
+}
+
+
+scrollDetect();

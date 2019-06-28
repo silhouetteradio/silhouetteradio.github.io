@@ -316,13 +316,56 @@ body {
 
 /*  Navbar  */
 
+#navbar-completecontainer {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 9;
+  width: 100%;
+  transition: 0.4s;
+}
+
+#navbar-mobilequality {
+  width: 100%;
+  margin: 0px;
+  height: 45px;
+  background-color: black;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+#navbar-mobilequality h2 {
+  margin: 0px;
+  color: rgb(76.5,76.5,76.5);
+  font-family: lemonmilk;
+  font-size: 1em;
+}
+
+#widthdetect {
+  width: 0px;
+}
+
+#navbar-mobilequality a {
+  margin: 0px;
+  font-size: 1.2em;
+  color: rgb(76.5,76.5,76.5);
+  display: inline-block;
+  line-height: 20px;
+  margin-top: 5px;
+  //border: none;
+  padding: 5px;
+  position: relative;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-family: lemonmilk;
+}
 
 #navbar {
-	position: fixed;
+	position: relative;
 	height: 100px;
 	width: 100%;
 	background-color: black;
-	z-index: 9;
 	user-select: none;
 	-webkit-touch-callout: none;
 	-moz-user-select: none;
@@ -717,6 +760,7 @@ body {
 	transition: 0.4s;
 	overflow: hidden;
 	background-color: white;
+  height: 560px;
 }
 
 #lineup-title, #shows-title {
@@ -769,6 +813,11 @@ body {
 	line-height: 21px;
 	cursor: pointer;
 	text-decoration: none;
+  width: calc(100vw / 4.5 - 16px);
+  user-select: none;
+	-webkit-touch-callout: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
 }
 
 .third-time {
@@ -779,22 +828,16 @@ body {
 }
 
 .calendar {
-	width: calc(10% - 63px);
-	position: absolute;
 	display: inline-block;
 	height: 21px;
-	overflow: hidden;
-	transition: 0.4s;
 	color: black;
+  position: relative;
+  top: 0px;
 }
 
-.third-day:hover .calendar, .day-select .calendar {
-	width: calc(10% + 42px);
-}
-
-.third-day a:hover {
+.third-day a:hover, .third-day a:hover .calendar {
 	text-shadow: 0px 0px 0.5px black;
-	transition: 0.4s;
+	transition: 0.1s;
 }
 
 
@@ -909,8 +952,7 @@ body {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	transition: 0.2s;
-	border: 2px solid transparent;
-	background-repeat: no-repeat;
+	border: 2px solid black;
 }
 
 .fifth-anchor {
@@ -1009,6 +1051,10 @@ body {
 
 /*  /Footer  */
 
+.third-day-button {
+  display: none;
+}
+
 /*  Response  */
 
 #lineup {
@@ -1036,9 +1082,10 @@ body {
 }
 .third-day, .third-day:hover, .day-select {
 	width: 90%;
+  height: 42px;
 }
-.calendar, .third-day:hover .calendar, .day-select .calendar {
-	width: calc(90% - 64px);
+.third-day a, third-day:hover a, day-select a {
+  width: calc(100% - 16px)
 }
 .third-day h1 {
 	text-align: center;
@@ -1065,7 +1112,6 @@ body {
 	height: auto;
 }
 .fourth-event h2, .fourth-event p {
-	margin: 0px;
 	width: calc(100% - 40px);
 	text-align: center;
 	padding: 0px;
@@ -1073,6 +1119,26 @@ body {
 }
 #lineup {
 	top: -500px;
+}
+.third-day-button {
+  height: 33px;
+  width: 32px;
+  left: -5px;
+  position: relative;
+  float: right;
+  top: -40px;
+  background-image: url('./images/plus.svg');
+  background-position: center;
+  background-size: 32px 32px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: block;
+  image-rendering: optimizeSpeed;             /*                     */
+  image-rendering: -moz-crisp-edges;          /* Firefox             */
+  image-rendering: -o-crisp-edges;            /* Opera               */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and Safari) */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed       */
+  -ms-interpolation-mode: nearest-neighbor;   /* IE8+                */
 }
 }
 
@@ -1103,6 +1169,10 @@ body {
 }
 #navbar {
 	height: 60px;
+}
+#widthdetect {
+  width: 100%;
+  display: none;
 }
 #mobile-play {
 	position: fixed;
