@@ -1,12 +1,30 @@
 var secondOffset;
 var heightOffset;
+var quality = 0;
+var pageLoaded = 0;
+var pageTimer = 0;
 
-window.onload = function loadUp() {
+document.documentElement.style.overflowY = 'hidden';
+
+setInterval(function() {
+	if (pageLoaded == 0) {
+		pageTimer = pageTimer + 1;
+	}
+}, 10);
+
+window.onload = function() {
 	document.getElementById('load').style.opacity = '0';
 	document.getElementById('load').style.pointerEvents = 'none';
+	pageLoaded = 1;
+	document.documentElement.style.overflowY = 'scroll';
 	setTimeout(function() {
 		document.getElementById('load').style.display = 'none';
-	}, 1000)
+	}, 1000);
+	if (pageTimer < 40) {
+		qualityHigh();
+	} else {
+		qualityMedium();
+	}
 };
 
 setInterval(function() {
@@ -75,6 +93,7 @@ function scrollLoop() {
 
 var streamPlaying = 0;
 var stream = document.getElementById('stream');
+var stream2 = document.getElementById('stream2');
 
 function forcePlay() {
 	if (streamPlaying == 0) {
@@ -112,8 +131,8 @@ function streamPlay() {
 	document.getElementById('navbar-desktopcontrol').src = './style/images/pause-white.svg';
 	document.getElementById('navbar-desktopcontrol').style.left = '0px';
 	document.getElementById('navbar-desktopcontrol').style.transform = 'rotate(360deg)';
-	stream.play();
 	stream.volume = 1;
+	stream.play();
 	
 }
 
@@ -134,3 +153,20 @@ if (calendarDay == 0) {
 	calendarDay = 7;
 };
 document.getElementsByClassName("third-day")[calendarDay - 1].setAttribute("class", "day-select third-day");
+
+function qualityHigh() {
+	document.getElementsByClassName("navbar-q")[0].setAttribute("class", "navbar-q navbar-quality-selected");
+	document.getElementsByClassName("navbar-q")[1].setAttribute("class", "navbar-q navbar-quality");
+	stream.src = "https://str2b.openstream.co/1036?aw_0_1st.stationid=3850&aw_0_1st.publisherId=1060&aw_0_1st.serverId=str2b";
+	stream.load();
+	stream.play();
+}
+
+function qualityMedium() {
+	document.getElementsByClassName("navbar-q")[1].setAttribute("class", "navbar-q navbar-quality-selected");
+	quality = 0;
+	document.getElementsByClassName("navbar-q")[0].setAttribute("class", "navbar-q navbar-quality");
+	stream.src = "https://str2b.openstream.co/1035?aw_0_1st.stationid=3849&aw_0_1st.publisherId=1059&aw_0_1st.serverId=str2b";
+	stream.load();
+	stream.play();
+}
