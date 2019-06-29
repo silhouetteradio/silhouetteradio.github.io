@@ -4,6 +4,9 @@ var quality = 0;
 var pageLoaded = 0;
 var pageTimer = 0;
 var cycleVar = -1;
+var streamPlaying = 0;
+var stream = document.getElementById('stream');
+stream.volume = 0;
 
 document.documentElement.style.overflowY = 'hidden';
 
@@ -18,6 +21,7 @@ window.onload = function() {
 	document.getElementById('load').style.pointerEvents = 'none';
 	pageLoaded = 1;
 	document.documentElement.style.overflowY = 'scroll';
+	stream.volume = 0;
 	setTimeout(function() {
 		document.getElementById('load').style.display = 'none';
 	}, 1000);
@@ -122,10 +126,6 @@ function scrollLoop() {
 	setTranslate(0, yScrollPosition * 0.6, para4);
 	requestAnimationFrame(scrollLoop);
 }
-
-var streamPlaying = 0;
-var stream = document.getElementById('stream');
-var stream2 = document.getElementById('stream2');
 
 function forcePlay() {
 	if (streamPlaying == 0) {
