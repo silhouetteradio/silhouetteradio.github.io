@@ -43,7 +43,7 @@
   <body>
   <div id=load><div id="load-record"><div id="load-1"></div><div class="load-rotate" id="load-2"></div><div class="load-rotate" id="load-3"></div><div class="load-rotate" id="load-4"></div></div></div>
   <div style="scroll-behavior:smooth">
-    <audio id=stream src="https://str2b.openstream.co/1035?aw_0_1st.stationid=3849&aw_0_1st.publisherId=1059&aw_0_1st.serverId=str2b" autoplay="false"></audio>
+    <audio id=stream src="https://str2b.openstream.co/1035?aw_0_1st.stationid=3849&aw_0_1st.publisherId=1059&aw_0_1st.serverId=str2b"></audio>
 	<div id=widthdetect></div>
 	<div id=scroll></div>
     <div id=navbar-completecontainer>
@@ -94,9 +94,9 @@
 	    <a id=top-arrow href="#scroll"></a>
 	  </div>
 	  <div id=top-buttoncontainer>
-	    <div id=top-button onClick="forcePlay()">
+	    <div id=top-button onClick="streamToggle()">
 		  <div id=top-buttonspan>
-		    <span>Listen</span>
+		    <span id=topbuttontext>Listen</span>
 		  </div>
 		  <div id=top-buttonimg>
 		    <img src="./style/images/play-white.svg">
@@ -125,7 +125,7 @@
 	  </div>
 	  <div class=fourth-event><div style="background-image: url('./style/images/events/development.png')"></div><h2>Development</h2><p>We're still in the alpha stages. We're still ironing out the bugs and scripting, to provide you with 24/7 entertainment consisting of shows, new tracks, and live music. It's a long process, so bear with us here.</p></div>
 	  <div class=fourth-event><div style="background-image: url('./style/images/events/hosttrial.png')"></div><h2>Host Trial</h2><p>See yourself as an aspiring radio host? Give yourself a shot at Silhouette! We're currently accepting host trials and experimental shows, so this might be your chance to get yourself on air. Have your voice heard. Here, at Silhouette. <a onClick="window.open('http://www.silhouette.gq/jobs','_blank')">Learn More</a></p></div>
-	  <div class=fourth-event><div style="background-image: url('./style/images/deadbeats/Vaporwave.jpg')"></div><h2>Deadbeats W/ the Ghost DJ</h2><p>The Ghost DJ's picks for Deadbeats: Vaporwave. Listen in from 23:00 to 3:00 every night.</p></div>
+	  <div class=fourth-event><div style="background-image: url('./style/images/deadbeats/TripSketch.jpg')"></div><h2>Deadbeats W/ the Ghost DJ</h2><p>The Ghost DJ's picks for Deadbeats: TripSketch. Listen in from 23:00 to 3:00 every night.</p></div>
 	</div>
 	<div id=third-calendarcontainer>
 	  <div id=third-cover></div>
@@ -150,10 +150,10 @@
 		  <a href="#highway"><span class=third-time>12:00</span> - <span class=calendar id=mon-12>Highway</span></a>
 		  <a href="#highway"><span class=third-time>13:00</span> - <span class=calendar id=mon-13>Highway</span></a>
 		  <a href="#highway"><span class=third-time>14:00</span> - <span class=calendar id=mon-14>Highway</span></a>
-		  <a href="#afternoonride"><span class=third-time>15:00</span> - <span class=calendar id=mon-15>Afternoon Ride</span></a>
-		  <a href="#afternoonride"><span class=third-time>16:00</span> - <span class=calendar id=mon-16>Afternoon Ride</span></a>
-		  <a href="#afternoonride"><span class=third-time>17:00</span> - <span class=calendar id=mon-17>Afternoon Ride</span></a>
-		  <a href="#toppicks"><span class=third-time>18:00</span> - <span class=calendar id=mon-18>Top Picks</span></a>
+		  <a href="#afternoonride"><span class=third-time>15:00</span> - <span class=calendar id=mon-15>Drop 120</span></a>
+		  <a href="#afternoonride"><span class=third-time>16:00</span> - <span class=calendar id=mon-16>Drop 120</span></a>
+		  <a href="#afternoonride"><span class=third-time>17:00</span> - <span class=calendar id=mon-17>Drive</span></a>
+		  <a href="#toppicks"><span class=third-time>18:00</span> - <span class=calendar id=mon-18>Wind Down</span></a>
 		  <a href="#eveningchill"><span class=third-time>19:00</span> - <span class=calendar id=mon-19>Evening Chill</span></a>
 		  <a href="#eveningchill"><span class=third-time>20:00</span> - <span class=calendar id=mon-20>Evening Chill</span></a>
 		  <a href="#eveningchill"><span class=third-time>21:00</span> - <span class=calendar id=mon-21>Evening Chill</span></a>
@@ -178,10 +178,10 @@
 		  <a href="#highway"><span class=third-time>12:00</span> - <span class=calendar id=tue-12>Highway</span></a>
 		  <a href="#highway"><span class=third-time>13:00</span> - <span class=calendar id=tue-13>Highway</span></a>
 		  <a href="#highway"><span class=third-time>14:00</span> - <span class=calendar id=tue-14>Highway</span></a>
-		  <a href="#afternoonride"><span class=third-time>15:00</span> - <span class=calendar id=tue-15>Afternoon Ride</span></a>
-		  <a href="#afternoonride"><span class=third-time>16:00</span> - <span class=calendar id=tue-16>Afternoon Ride</span></a>
-		  <a href="#afternoonride"><span class=third-time>17:00</span> - <span class=calendar id=tue-17>Afternoon Ride</span></a>
-		  <a href="#toppicks"><span class=third-time>18:00</span> - <span class=calendar id=tue-18>Top Picks</span></a>
+		  <a href="#afternoonride"><span class=third-time>15:00</span> - <span class=calendar id=tue-15>Drop 120</span></a>
+		  <a href="#afternoonride"><span class=third-time>16:00</span> - <span class=calendar id=tue-16>Drop 120</span></a>
+		  <a href="#afternoonride"><span class=third-time>17:00</span> - <span class=calendar id=tue-17>Drive</span></a>
+		  <a href="#toppicks"><span class=third-time>18:00</span> - <span class=calendar id=tue-18>Wind Down</span></a>
 		  <a href="#eveningchill"><span class=third-time>19:00</span> - <span class=calendar id=tue-19>Evening Chill</span></a>
 		  <a href="#eveningchill"><span class=third-time>20:00</span> - <span class=calendar id=tue-20>Evening Chill</span></a>
 		  <a href="#eveningchill"><span class=third-time>21:00</span> - <span class=calendar id=tue-21>Evening Chill</span></a>
@@ -206,10 +206,10 @@
 		  <a href="#highway"><span class=third-time>12:00</span> - <span class=calendar id=wed-12>Highway</span></a>
 		  <a href="#highway"><span class=third-time>13:00</span> - <span class=calendar id=wed-13>Highway</span></a>
 		  <a href="#highway"><span class=third-time>14:00</span> - <span class=calendar id=wed-14>Highway</span></a>
-		  <a href="#afternoonride"><span class=third-time>15:00</span> - <span class=calendar id=wed-15>Afternoon Ride</span></a>
-		  <a href="#afternoonride"><span class=third-time>16:00</span> - <span class=calendar id=wed-16>Afternoon Ride</span></a>
-		  <a href="#afternoonride"><span class=third-time>17:00</span> - <span class=calendar id=wed-17>Afternoon Ride</span></a>
-		  <a href="#toppicks"><span class=third-time>18:00</span> - <span class=calendar id=wed-18>Top Picks</span></a>
+		  <a href="#afternoonride"><span class=third-time>15:00</span> - <span class=calendar id=wed-15>Drop 120</span></a>
+		  <a href="#afternoonride"><span class=third-time>16:00</span> - <span class=calendar id=wed-16>Drop 120</span></a>
+		  <a href="#afternoonride"><span class=third-time>17:00</span> - <span class=calendar id=wed-17>Drive</span></a>
+		  <a href="#toppicks"><span class=third-time>18:00</span> - <span class=calendar id=wed-18>Wind Down</span></a>
 		  <a href="#eveningchill"><span class=third-time>19:00</span> - <span class=calendar id=wed-19>Evening Chill</span></a>
 		  <a href="#eveningchill"><span class=third-time>20:00</span> - <span class=calendar id=wed-20>Evening Chill</span></a>
 		  <a href="#eveningchill"><span class=third-time>21:00</span> - <span class=calendar id=wed-21>Evening Chill</span></a>
@@ -234,10 +234,10 @@
 		  <a href="#highway"><span class=third-time>12:00</span> - <span class=calendar id=thu-12>Highway</span></a>
 		  <a href="#highway"><span class=third-time>13:00</span> - <span class=calendar id=thu-13>Highway</span></a>
 		  <a href="#highway"><span class=third-time>14:00</span> - <span class=calendar id=thu-14>Highway</span></a>
-		  <a href="#afternoonride"><span class=third-time>15:00</span> - <span class=calendar id=thu-15>Afternoon Ride</span></a>
-		  <a href="#afternoonride"><span class=third-time>16:00</span> - <span class=calendar id=thu-16>Afternoon Ride</span></a>
-		  <a href="#afternoonride"><span class=third-time>17:00</span> - <span class=calendar id=thu-17>Afternoon Ride</span></a>
-		  <a href="#toppicks"><span class=third-time>18:00</span> - <span class=calendar id=thu-18>Top Picks</span></a>
+		  <a href="#afternoonride"><span class=third-time>15:00</span> - <span class=calendar id=thu-15>Drop 120</span></a>
+		  <a href="#afternoonride"><span class=third-time>16:00</span> - <span class=calendar id=thu-16>Drop 120</span></a>
+		  <a href="#afternoonride"><span class=third-time>17:00</span> - <span class=calendar id=thu-17>Drive</span></a>
+		  <a href="#toppicks"><span class=third-time>18:00</span> - <span class=calendar id=thu-18>Wind Down</span></a>
 		  <a href="#eveningchill"><span class=third-time>19:00</span> - <span class=calendar id=thu-19>Evening Chill</span></a>
 		  <a href="#eveningchill"><span class=third-time>20:00</span> - <span class=calendar id=thu-20>Evening Chill</span></a>
 		  <a href="#eveningchill"><span class=third-time>21:00</span> - <span class=calendar id=thu-21>Evening Chill</span></a>
@@ -262,10 +262,10 @@
 		  <a href="#highway"><span class=third-time>12:00</span> - <span class=calendar id=fri-12>Highway</span></a>
 		  <a href="#highway"><span class=third-time>13:00</span> - <span class=calendar id=fri-13>Highway</span></a>
 		  <a href="#highway"><span class=third-time>14:00</span> - <span class=calendar id=fri-14>Highway</span></a>
-		  <a href="#afternoonride"><span class=third-time>15:00</span> - <span class=calendar id=fri-15>Afternoon Ride</span></a>
-		  <a href="#afternoonride"><span class=third-time>16:00</span> - <span class=calendar id=fri-16>Afternoon Ride</span></a>
-		  <a href="#afternoonride"><span class=third-time>17:00</span> - <span class=calendar id=fri-17>Afternoon Ride</span></a>
-		  <a href="#toppicks"><span class=third-time>18:00</span> - <span class=calendar id=fri-18>Top Picks</span></a>
+		  <a href="#afternoonride"><span class=third-time>15:00</span> - <span class=calendar id=fri-15>Drop 120</span></a>
+		  <a href="#afternoonride"><span class=third-time>16:00</span> - <span class=calendar id=fri-16>Drop 120</span></a>
+		  <a href="#afternoonride"><span class=third-time>17:00</span> - <span class=calendar id=fri-17>Drive</span></a>
+		  <a href="#toppicks"><span class=third-time>18:00</span> - <span class=calendar id=fri-18>Wind Down</span></a>
 		  <a href="#eveningchill"><span class=third-time>19:00</span> - <span class=calendar id=fri-19>Evening Chill</span></a>
 		  <a href="#eveningchill"><span class=third-time>20:00</span> - <span class=calendar id=fri-20>Evening Chill</span></a>
 		  <a href="#eveningchill"><span class=third-time>21:00</span> - <span class=calendar id=fri-21>Evening Chill</span></a>
@@ -347,9 +347,9 @@
 	  <div id=deadbeats class=fifth-anchor></div>
 	  <h1>Deadbeats</h1>
 	  <div id=sixth-container>
-	    <div id=sixth-top style="background-image:url('./style/images/deadbeats/Vaporwave.jpg')"></div>
-		<div class=sixth-top-size><div class=sixth-top-back style="background-image:url('./style/images/deadbeats/Electro Swing.jpg');z-index: -1"></div></div>
-		<div class=sixth-top-size><div class=sixth-top-back style="background-image:url('./style/images/deadbeats/Tripsketch.jpg');z-index: -2"></div></div>
+	    <div id=sixth-top style="background-image:url('./style/images/deadbeats/TripSketch.jpg')"></div>
+		<div class=sixth-top-size><div class=sixth-top-back style="background-image:url('./style/images/deadbeats/Vaporwave.jpg');z-index: -1"></div></div>
+		<div class=sixth-top-size><div class=sixth-top-back style="background-image:url('./style/images/deadbeats/Electro Swing.jpg');z-index: -2"></div></div>
 	  </div>
 	</div>
 	<br>

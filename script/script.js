@@ -6,7 +6,7 @@ var pageTimer = 0;
 var cycleVar = -1;
 var streamPlaying = 0;
 var stream = document.getElementById('stream');
-stream.volume = 0;
+var startedalready = 0;
 
 document.documentElement.style.overflowY = 'hidden';
 
@@ -18,10 +18,11 @@ setInterval(function() {
 
 window.onload = function() {
 	document.getElementById('load').style.opacity = '0';
+	document.getElementById('load').style.MozOpacity = '0';
+	document.getElementById('load').style.KhtmlOpacity = '0';
 	document.getElementById('load').style.pointerEvents = 'none';
 	pageLoaded = 1;
 	document.documentElement.style.overflowY = 'scroll';
-	stream.volume = 0;
 	setTimeout(function() {
 		document.getElementById('load').style.display = 'none';
 	}, 1000);
@@ -57,6 +58,8 @@ setInterval(function() {
 	
 	if (document.documentElement.scrollTop >= document.getElementById('third-calendarcontainer').offsetTop + 60) {
 		document.getElementById('third-cover').style.opacity = '0';
+		document.getElementById('load').style.MozOpacity = '0';
+		document.getElementById('load').style.KhtmlOpacity = '0';
 		document.getElementById('fourth').style.opacity = '0';
 		document.getElementById('second').style.opacity = '0';
 		document.getElementById('lineup-title').style.color = 'white';
@@ -64,6 +67,8 @@ setInterval(function() {
 		document.getElementsByClassName('navbar-link')[1].style.borderBottom = '2px solid red';
 	} else {
 		document.getElementById('third-cover').style.opacity = '1';
+		document.getElementById('load').style.MozOpacity = '1';
+		document.getElementById('load').style.KhtmlOpacity = '1';
 		document.getElementById('fourth').style.opacity = '1';
 		document.getElementById('second').style.opacity = '1';
 		document.getElementById('lineup-title').style.color = 'black';
@@ -102,6 +107,12 @@ setInterval(function() {
       document.getElementsByClassName("third-day-button")[cycleVar].style.transform = "rotate(0deg)";
     }
   }
+  
+  if (stream.paused != false) {
+	  displayStop();
+  } else {
+	  displayStart();
+  }
 }, 0);
 
 
@@ -127,22 +138,28 @@ function scrollLoop() {
 	requestAnimationFrame(scrollLoop);
 }
 
-function forcePlay() {
-	if (streamPlaying == 0) {
-		streamPlaying = 1;
+function streamToggle() {
+	if (startedalready == 0) {
 		streamPlay();
+	} else {
+		streamRun();
 	}
 }
 
 function streamToggle() {
-	if (streamPlaying == 0) {
-		streamPlaying = 1;
+    if (stream.paused != false) {
 		streamPlay();
+		if (stream.duration != 'infinity') {
+			stream.currentTime = stream.duration - 1;
+		}
 	} else {
-		streamPlaying = 0;
 		streamStop();
 	}
 }
+
+
+
+
 
 function requestClose() {
 	document.getElementById('request').style.opacity = '0';
@@ -156,19 +173,17 @@ function requestOpen() {
 
 
 function streamPlay() {
-	document.getElementById('navbar-record').style.animationPlayState = 'running';
-	document.getElementById('mobile-image').src = './style/images/pause-white.svg';
-	document.getElementById('mobile-image').style.left = '0px';
-	document.getElementById('mobile-image').style.transform = 'rotate(360deg)';
-	document.getElementById('navbar-desktopcontrol').src = './style/images/pause-white.svg';
-	document.getElementById('navbar-desktopcontrol').style.left = '0px';
-	document.getElementById('navbar-desktopcontrol').style.transform = 'rotate(360deg)';
-	stream.volume = 1;
 	stream.play();
+	streamplaying = 1;
 	
 }
 
 function streamStop() {
+	stream.pause();
+	streamplaying = 0;
+}
+
+function displayStop() {
 	document.getElementById('navbar-record').style.animationPlayState = 'paused';
 	document.getElementById('mobile-image').src = './style/images/play-white.svg';
 	document.getElementById('mobile-image').style.left = '5px';
@@ -176,7 +191,18 @@ function streamStop() {
 	document.getElementById('navbar-desktopcontrol').src = './style/images/play-white.svg';
 	document.getElementById('navbar-desktopcontrol').style.left = '5px';
 	document.getElementById('navbar-desktopcontrol').style.transform = 'rotate(0deg)';
-	stream.volume = 0;
+	document.getElementById('topbuttontext').innerHTML = 'Listen';
+}
+
+function displayStart() {
+	document.getElementById('navbar-record').style.animationPlayState = 'running';
+	document.getElementById('mobile-image').src = './style/images/pause-white.svg';
+	document.getElementById('mobile-image').style.left = '0px';
+	document.getElementById('mobile-image').style.transform = 'rotate(360deg)';
+	document.getElementById('navbar-desktopcontrol').src = './style/images/pause-white.svg';
+	document.getElementById('navbar-desktopcontrol').style.left = '0px';
+	document.getElementById('navbar-desktopcontrol').style.transform = 'rotate(360deg)';
+	document.getElementById('topbuttontext').innerHTML = 'Stop';
 }
 
 var calendarDate = new Date();
@@ -193,7 +219,9 @@ function qualityHigh() {
 	document.getElementsByClassName("navbar-q")[3].setAttribute("class", "navbar-q navbar-quality");
 	stream.src = "https://str2b.openstream.co/1036?aw_0_1st.stationid=3850&aw_0_1st.publisherId=1060&aw_0_1st.serverId=str2b";
 	stream.load();
-	stream.play();
+	if (streamplaying == 1) {
+		stream.play();
+	}
 }
 
 function qualityMedium() {
@@ -203,7 +231,9 @@ function qualityMedium() {
 	document.getElementsByClassName("navbar-q")[2].setAttribute("class", "navbar-q navbar-quality");
 	stream.src = "https://str2b.openstream.co/1035?aw_0_1st.stationid=3849&aw_0_1st.publisherId=1059&aw_0_1st.serverId=str2b";
 	stream.load();
-	stream.play();
+	if (streamplaying == 1) {
+		stream.play();
+	}
 }
 
 document.getElementsByClassName("third-day")[calendarDay - 1].style.height = "560px";
