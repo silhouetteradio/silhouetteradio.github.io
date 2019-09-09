@@ -1004,7 +1004,7 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 296px;
-	border: 2px solid transparent;
+	border: 2px solid black;
 	width: 296px;
 	transition: 1s;
 }
@@ -1101,18 +1101,19 @@ body {
 
 #footer-social img {
 	height: 60px;
-	background-color: white;
 	margin-left: 10px;
 	margin-right: 10px;
 	cursor: pointer;
 	transition: 0.15s;
 	position: relative;
 	top: 0px;
+	vertical-align: top;
 }
 
 #footer-social img:hover {
 	top: -10px;
 	transition: 0.1s;
+	padding-bottom: 10px;
 }
 
 #footer p {
